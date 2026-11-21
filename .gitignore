@@ -1,0 +1,29 @@
+# .NET build output
+bin/
+obj/
+*.user
+*.suo
+*.tmp
+
+# Visual Studio / IDE
+.vs/
+.idea/
+.vscode/
+
+# Nested repositories (pushed separately)
+web/
+mobile/
+
+# Secrets and local environment
+.env
+.env.*
+*.env.local
+
+# Dependencies and generated output
+node_modules/
+.next/
+tsconfig.tsbuildinfo
+
+# OS files
+Thumbs.db
+.DS_Store

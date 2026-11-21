@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/BijliGuard.API/BijliGuard.API.csproj" />
+    <Project Path="src/BijliGuard.Application/BijliGuard.Application.csproj" />
+    <Project Path="src/BijliGuard.Domain/BijliGuard.Domain.csproj" />
+    <Project Path="src/BijliGuard.Infrastructure/BijliGuard.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/BijliGuard.Application.Tests/BijliGuard.Application.Tests.csproj" />
+    <Project Path="tests/BijliGuard.Domain.Tests/BijliGuard.Domain.Tests.csproj" />
+  </Folder>
+</Solution>

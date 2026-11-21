@@ -1,0 +1,4 @@
+2026-11-18 00:12:55.686 +05:00 [INF] [a8d494f813e14d039f2bb46ed0c637da] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.0ms
+2026-11-18 00:12:55.952 +05:00 [INF] [dbe8d07878ec445c8ae46afed856631f] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 253.6ms
+2026-11-18 00:12:55.966 +05:00 [INF] [45df2a361e4c4480bcfab2d21233e3dc] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-18 00:12:55.970 +05:00 [INF] [06ef9298f09340378b88d0888a15c03e] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 1.0ms

@@ -1,0 +1,88 @@
+2026-11-17 00:13:43.719 +05:00 [INF] [94b683db44f64a4fbacd6ebc5aa029f2] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.0ms
+2026-11-17 00:13:44.060 +05:00 [INF] [0bb9f3143f714091a9ef2112179c7a4f] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 299.4ms
+2026-11-17 00:13:44.458 +05:00 [INF] [57300cf2d6d7442b8a779f4a645d75b0] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-17 00:13:44.467 +05:00 [INF] [ceb5ea4fcdf24487985ec61ec6800948] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 0.6ms
+2026-11-17 00:27:44.345 +05:00 [INF] [4582d98139814221a6df7c3a009cfc70] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.0ms
+2026-11-17 00:27:44.499 +05:00 [INF] [113513ddfb594fa89f4afe1a8a58236c] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 107.2ms
+2026-11-17 00:27:44.506 +05:00 [INF] [e8bb45ff03fd461eb0afa6754d9c13a5] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-17 00:27:44.509 +05:00 [INF] [d874f4b7e59e492997ec754bddcf3b1c] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 0.4ms
+2026-11-17 00:41:45.353 +05:00 [INF] [9ad2e7675d5b41bc9dd5d74fb536c2ef] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.1ms
+2026-11-17 00:41:45.553 +05:00 [INF] [8228595b53a547a38be197f84a8f949b] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 150.2ms
+2026-11-17 00:41:45.562 +05:00 [INF] [7573af8193464cc59f3ab99ed2f80b98] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-17 00:41:45.565 +05:00 [INF] [cbc8d562b6864e32a83106b25097e203] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 1.0ms
+2026-11-17 00:55:46.355 +05:00 [INF] [542654b16c904643a4ee63c042b4f786] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.1ms
+2026-11-17 00:55:46.581 +05:00 [INF] [73a14da55c764ded8e19788e5ead432e] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 173.3ms
+2026-11-17 00:55:46.591 +05:00 [INF] [421c4c1fc6724b9fa41c0f89722cac98] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-17 00:55:46.593 +05:00 [INF] [fd1a3c79bdd9485098f12ee733865431] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 0.8ms
+2026-11-17 06:43:58.775 +05:00 [INF] [7aef390d445048f081105a3d00d4e825] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.1ms
+2026-11-17 06:43:59.101 +05:00 [ERR] [465b5422c0de4b5ebb7f37c70b671844] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 500 309.9ms
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at BijliGuard.Application.Auth.AuthService.RefreshAsync(String refreshToken, CancellationToken ct) in C:\My Bill\src\BijliGuard.Application\Auth\AuthService.cs:line 263
+   at BijliGuard.API.Controllers.AuthController.Refresh(RefreshRequest request, CancellationToken ct) in C:\My Bill\src\BijliGuard.API\Controllers\AuthController.cs:line 71
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.RateLimiting.RateLimitingMiddleware.InvokeInternal(HttpContext context, EnableRateLimitingAttribute enableRateLimitingAttribute)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-11-17 10:56:52.558 +05:00 [INF] [4ee69e6ef1d64b09992948a4bdea5a9f] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.1ms
+2026-11-17 10:56:52.633 +05:00 [INF] [81406c95b9814caca58c21a40a3a4a2b] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 67.1ms
+2026-11-17 10:56:52.655 +05:00 [INF] [0817d90a81f64e6b8bd1e2c1ebde43f1] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.1ms
+2026-11-17 10:56:52.661 +05:00 [INF] [d9999ccb69904f96a863df5abbcc27d5] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 0.9ms
+2026-11-17 10:57:33.741 +05:00 [INF] [baf9930bae824dcd98665075f28cddde] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-17 10:57:33.748 +05:00 [INF] [22cb75a011644bc1be3384524448bcfa] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 1.4ms
+2026-11-17 11:10:53.594 +05:00 [INF] [3b1c684dcfbb4967a46b6d8f3b3b1fa5] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.1ms
+2026-11-17 11:10:53.791 +05:00 [INF] [c07e8b1986c3403b98ade6114f7d84ec] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 194.0ms
+2026-11-17 11:10:53.804 +05:00 [INF] [471a710702c249339340ee69569fc3e0] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-17 11:10:53.807 +05:00 [INF] [44923efde7064f758662a7e537a7a65c] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 0.8ms
+2026-11-17 11:30:22.008 +05:00 [INF] [0369d4478c7f4e2bac198d4776305e65] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.0ms
+2026-11-17 11:30:22.408 +05:00 [INF] [dacca2cd0c5f4ff881f2c306ea0d1db7] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 392.4ms
+2026-11-17 11:30:22.625 +05:00 [INF] [722828221eff4ff6b2b912e69ef408e7] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-17 11:30:22.631 +05:00 [INF] [f954585b64ab476f83e7c39511f15a32] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 1.5ms
+2026-11-17 22:34:29.206 +05:00 [INF] [8dbb9091f2b04d538db53a9dc7c42a61] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.0ms
+2026-11-17 22:34:30.082 +05:00 [INF] [673c2b84a8084fd58189cd5c17df1560] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 855.6ms
+2026-11-17 22:34:31.557 +05:00 [INF] [cd52ac4a8dc347cebe4b97dea5ff1b43] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.1ms
+2026-11-17 22:34:31.561 +05:00 [INF] [1d2a77433c3d477cb09f8f26a6598492] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 0.8ms
+2026-11-17 22:48:48.281 +05:00 [INF] [a80f895417a6427a8f9a94597bb993ca] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.0ms
+2026-11-17 22:48:50.327 +05:00 [INF] [cc0b996a51834b8a8e9cdb01a723ac4f] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 2025.5ms
+2026-11-17 22:48:51.013 +05:00 [INF] [1f1011d6ef0545b395062e8f68811d8f] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-17 22:48:51.018 +05:00 [INF] [08079869f0ce47ba9fbf797a84372411] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 0.8ms
+2026-11-17 22:55:41.038 +05:00 [INF] [8e609e1cfc3b47fbaec39c313a62ea59] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/login 204 0.0ms
+2026-11-17 22:55:41.120 +05:00 [INF] [187dced9168d4e60a7f42db5c4bd5c28] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/login 422 77.0ms
+2026-11-17 22:55:42.608 +05:00 [INF] [ddc230f9f97f4ed59afbea3c95874eef] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/login 422 1.7ms
+2026-11-17 23:02:50.677 +05:00 [INF] [d90c0d3da92049608cf718598735c1e1] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.0ms
+2026-11-17 23:02:50.983 +05:00 [INF] [6938035ec3574ad9be07f30c43dcb37c] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 295.3ms
+2026-11-17 23:02:50.999 +05:00 [INF] [c4c15bd2bbd544a2bd69c1a2f49d0ceb] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-17 23:02:51.005 +05:00 [INF] [7f742b9edae4405180fdc6800dcfeca2] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 1.0ms
+2026-11-17 23:16:51.690 +05:00 [INF] [776063adb9fd4065b11af3a8b3350440] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.0ms
+2026-11-17 23:16:51.970 +05:00 [INF] [3ba0ed0391a243faa3b6d2a40f71f83b] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 276.6ms
+2026-11-17 23:16:51.988 +05:00 [INF] [77be5932cc4040538b02bdd3ace2d0eb] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-17 23:16:51.991 +05:00 [INF] [b54263310f024f5182cc3d421dc26ef9] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 0.8ms
+2026-11-17 23:30:52.683 +05:00 [INF] [bb25a2b7ebdb4795b2784ac0face1aac] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.0ms
+2026-11-17 23:30:52.955 +05:00 [INF] [0f912cdac5ed43ea9889fe7e27cacb05] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 263.5ms
+2026-11-17 23:30:52.968 +05:00 [INF] [42ad616d045049e1802ec335942082f7] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-17 23:30:52.973 +05:00 [INF] [06a55eb661b049b99c676a93e75db903] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 1.1ms
+2026-11-17 23:44:53.681 +05:00 [INF] [c7c4441aeedb460699371985af760ece] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.1ms
+2026-11-17 23:44:54.013 +05:00 [INF] [c8f934cb37b94244aaacd6c8591bf08a] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 324.8ms
+2026-11-17 23:44:54.028 +05:00 [INF] [e8fb69c48300455aae8a47f5c1fbd1f2] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-17 23:44:54.034 +05:00 [INF] [9f606de6965d4357a04edef013f0b8fe] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 1.9ms
+2026-11-17 23:58:54.688 +05:00 [INF] [9db282fd8cbd4a25931bb839836dc802] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/refresh 204 0.1ms
+2026-11-17 23:58:54.943 +05:00 [INF] [779286f92b3e4d1cb5bbceb416d8b83a] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted POST /api/v1/auth/refresh 200 249.7ms
+2026-11-17 23:58:54.957 +05:00 [INF] [67da9c76aa9442c8bbf86aa9200d0a76] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted OPTIONS /api/v1/auth/me 204 0.0ms
+2026-11-17 23:58:54.962 +05:00 [INF] [9b52a09e395f4581abae3ec69b5a4eaf] Serilog.AspNetCore.RequestLoggingMiddleware Http.RequestCompleted GET /api/v1/auth/me 200 1.1ms
